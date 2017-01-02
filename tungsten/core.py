@@ -39,7 +39,7 @@ class Tungsten(object):
             if r.encoding != 'utf-8':
                 raise Exception('Invalid encoding: %s' % (r.encoding))
 
-        except Exception, e:
+        except Exception as e:
             return Result(error = e)
 
         return Result(xml = r.text)
